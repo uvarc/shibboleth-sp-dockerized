@@ -8,7 +8,7 @@ LABEL maintainer="Unicon, Inc."
 RUN yum -y update \
     && yum -y install wget \
     && wget http://download.opensuse.org/repositories/security://shibboleth/CentOS_7/security:shibboleth.repo -P /etc/yum.repos.d \
-    && yum -y install httpd shibboleth-3.0.4-3.2 mod_ssl \
+    && yum -y install httpd shibboleth-3.0.4-3.2 mod_ssl mod_security mod_security_crs \
     && yum -y clean all
 
 COPY httpd-shibd-foreground /usr/local/bin/
