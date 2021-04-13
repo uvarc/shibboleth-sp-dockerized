@@ -13,7 +13,7 @@ RUN yum -y update \
 
 COPY httpd-shibd-foreground /usr/local/bin/
 COPY shibboleth/ /etc/shibboleth/
-COPY modsecurity_crs_10_config.conf /etc/httpd/modsecurity.d/modsecurity_crs_10_config.conf
+#COPY modsecurity_crs_10_config.conf /etc/httpd/modsecurity.d/modsecurity_crs_10_config.conf
 
 RUN test -d /var/run/lock || mkdir -p /var/run/lock \
     && test -d /var/lock/subsys/ || mkdir -p /var/lock/subsys/ \
